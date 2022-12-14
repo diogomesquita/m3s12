@@ -1,0 +1,25 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.tabla {
+  display: none;
+}
+
+table, th, td {
+  width: 500px;
+  text-align: center;
+  border: 1px solid white;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+th, td {
+  background-color: #96D4D4;
+}
+
+.showMeBit {
+  display: flex;
+}
