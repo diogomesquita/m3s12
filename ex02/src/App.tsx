@@ -1,3 +1,4 @@
+import Tabla from './Tabla';
 import { useEffect, useState } from 'react';
 import './App.css';
 const url1="https://api.techniknews.net/ipgeo/";
@@ -22,24 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className='tabla'><table className='data'>
-        <tr>
-          <th>ip</th>
-          <th>city</th>
-          <th>region</th>
-          <th>country</th>
-          <th>latitude</th>
-          <th>longitude</th>
-        </tr>
-        <tr>
-          <td>{data.ip}</td>
-          <td>{data.city}</td>
-          <td>{data.regionName}</td>
-          <td>{data.country}</td>
-          <td>{data.lat}</td>
-          <td>{data.lon}</td>
-        </tr>
-        </table></div>
+        <Tabla ip={data.ip} city={data.city} regionName={data.regionName} country={data.country} lat={data.lat} lon={data.lon}/>
       <div><button onClick={getData}>What's my IP</button></div>
     </div>
   )
