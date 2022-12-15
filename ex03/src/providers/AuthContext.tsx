@@ -1,6 +1,6 @@
 import { createContext, ReactNode, useState } from "react";
 
-type AuthProvider = {
+type AuthProviderProps = {
     children: ReactNode;
 }
 
@@ -13,7 +13,7 @@ type AuthContextData = {
 
 export const AuthContextData = createContext({} as AuthContextData);
 
-export const AuthProvider = ({children}: AuthProvider) => {
+export const AuthProvider = ({children}: AuthProviderProps) => {
         const [isAuthenticated, setIsAuthenticated] = useState(false)
         const [user, setUser]= useState("");
     return(

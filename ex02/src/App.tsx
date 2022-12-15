@@ -3,10 +3,19 @@ import { useEffect, useState } from 'react';
 import './App.css';
 const url1="https://api.techniknews.net/ipgeo/";
 
+type dataData = {
+  status: string;
+  ip: string;
+  city: string;
+  regionName: string;
+  country: string;
+  lat: string;
+  lon: string;
+}
 
 
 function App() {
-  const [data, setData] = useState({});
+  const [data, setData] = useState({} as dataData);
 
   async function getData() {
     const response = await fetch(url1);

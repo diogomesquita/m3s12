@@ -9,7 +9,7 @@ function App() {
   // let milisegundo:String = ("0000" + ms).slice(-4)
 
   const [count, setCount] = useState(0);
-  const [interv, setInterv] = useState();
+  const [interv, setInterv] = useState(0);
 
   const startChrono = () => {
     setInterv(setInterval(() => {

@@ -1,4 +1,14 @@
-function Tabla(props) {
+type dataProps = {
+  status: string;
+  ip: string;
+  city: string;
+  regionName: string;
+  country: string;
+  lat: string;
+  lon: string;
+}
+
+function Tabla({ip, city, regionName, country, lat, lon}: dataProps) {
     return(
         <div className='tabla'><table className='data'>
         <tr>
@@ -10,12 +20,12 @@ function Tabla(props) {
           <th>longitude</th>
         </tr>
         <tr>
-          <td>{props.ip}</td>
-          <td>{props.city}</td>
-          <td>{props.regionName}</td>
-          <td>{props.country}</td>
-          <td>{props.lat}</td>
-          <td>{props.lon}</td>
+          <td>{ip}</td>
+          <td>{city}</td>
+          <td>{regionName}</td>
+          <td>{country}</td>
+          <td>{lat}</td>
+          <td>{lon}</td>
         </tr>
         </table>
         </div>
