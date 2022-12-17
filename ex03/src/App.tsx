@@ -6,7 +6,14 @@ function App() {
   const {isAuthenticated, setIsAuthenticated, user, setUser} = useContext(AuthContextData);
   return (
     <div className="App">
-      {isAuthenticated ? (<><h2>{user} entrou!</h2><h2>Tá logado, mano!</h2><button onClick={() => {setIsAuthenticated(false), setUser("Diogo")}}>logout</button></>) : (<><h2>{user} saiu!</h2><h2>Num tá logado, mano!</h2><button onClick={() => {setIsAuthenticated(true), setUser("Diogo")}}>login</button></>)}
+      {isAuthenticated ? (<>
+
+      <h2>{user} Tá logado, mano!</h2>
+      <button onClick={() => {setIsAuthenticated(false), setUser("")}}>logout</button>
+      </>) : (<>
+      <h2>{user} Num tá logado, mano!</h2>
+      <input type="text" onChange={(e)=> {setUser(e.target.value)}}/>
+      <button onClick={() => {setIsAuthenticated(true), setUser(user)}}>login</button></>)}
     </div>
   )
 }
